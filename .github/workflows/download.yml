@@ -1,0 +1,18 @@
+name: Download Postman
+
+on:
+  workflow_dispatch:
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Postman .deb
+        run: |
+          curl -L -o postman.deb https://dl.pstmn.io/download/latest/linux64
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: postman-deb
+          path: postman.deb
