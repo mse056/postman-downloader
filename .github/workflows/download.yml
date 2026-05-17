@@ -1,4 +1,4 @@
-name: Download Postman
+name: Download Postman (tar.gz)
 
 on:
   workflow_dispatch:
@@ -7,12 +7,12 @@ jobs:
   download:
     runs-on: ubuntu-latest
     steps:
-      - name: Download Postman .deb
+      - name: Download Postman tar.gz
         run: |
-          curl -L -o postman.deb https://dl.pstmn.io/download/latest/linux64
+          curl -L -o postman.tar.gz https://dl.pstmn.io/download/latest/linux_64
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: postman-deb
-          path: postman.deb
+          name: postman-tar
+          path: postman.tar.gz
