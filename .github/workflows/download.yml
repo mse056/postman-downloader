@@ -12,7 +12,7 @@ jobs:
           curl -L -o postman.deb https://dl.pstmn.io/download/latest/linux64
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: postman-deb
           path: postman.deb
