@@ -1,4 +1,4 @@
-name: Download Postman (tar.gz)
+name: Download Telegram Debian Package
 
 on:
   workflow_dispatch:
@@ -7,12 +7,12 @@ jobs:
   download:
     runs-on: ubuntu-latest
     steps:
-      - name: Download Postman tar.gz
+      - name: Download Telegram .deb
         run: |
-          curl -L -o postman.tar.gz https://dl.pstmn.io/download/latest/linux_64
+          curl -L -o telegram.deb https://updates.tdesktop.com/tlinux/tsetup.deb
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: postman-tar
-          path: postman.tar.gz
+          name: telegram-deb
+          path: telegram.deb
