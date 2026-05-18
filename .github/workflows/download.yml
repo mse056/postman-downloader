@@ -1,4 +1,4 @@
-name: Download Telegram Debian Package
+name: Download Telegram (tar.xz)
 
 on:
   workflow_dispatch:
@@ -7,12 +7,12 @@ jobs:
   download:
     runs-on: ubuntu-latest
     steps:
-      - name: Download Telegram .deb
+      - name: Download Telegram tar.xz
         run: |
-          curl -L -o telegram.deb https://updates.tdesktop.com/tlinux/tsetup.deb
+          curl -L -o telegram.tar.xz https://telegram.org/dl/desktop/linux
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: telegram-deb
-          path: telegram.deb
+          name: telegram-tar
+          path: telegram.tar.xz
