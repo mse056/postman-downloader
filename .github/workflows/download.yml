@@ -1,4 +1,4 @@
-name: Download Telegram (tar.xz)
+name: Download Sublime Text
 
 on:
   workflow_dispatch:
@@ -7,12 +7,12 @@ jobs:
   download:
     runs-on: ubuntu-latest
     steps:
-      - name: Download Telegram tar.xz
+      - name: Download Sublime Text .deb
         run: |
-          curl -L -o telegram.tar.xz https://telegram.org/dl/desktop/linux
+          curl -L -o sublime-text.deb https://download.sublimetext.com/sublime-text_build-3211_amd64.deb
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: telegram-tar
-          path: telegram.tar.xz
+          name: sublime-text-deb
+          path: sublime-text.deb
