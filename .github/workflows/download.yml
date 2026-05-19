@@ -1,4 +1,4 @@
-name: Download Sublime Text
+name: Download Spotify for Ubuntu
 
 on:
   workflow_dispatch:
@@ -7,12 +7,12 @@ jobs:
   download:
     runs-on: ubuntu-latest
     steps:
-      - name: Download Sublime Text .deb
+      - name: Download Spotify .deb
         run: |
-          curl -L -o sublime-text.deb https://download.sublimetext.com/sublime-text_build-3211_amd64.deb
+          curl -L -o spotify.deb https://download.spotify.com/linux/spotify-client_amd64.deb
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: sublime-text-deb
-          path: sublime-text.deb
+          name: spotify-deb
+          path: spotify.deb
