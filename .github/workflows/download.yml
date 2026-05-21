@@ -1,4 +1,4 @@
-name: Download Spotify for Ubuntu
+name: Download FDM
 
 on:
   workflow_dispatch:
@@ -7,12 +7,12 @@ jobs:
   download:
     runs-on: ubuntu-latest
     steps:
-      - name: Download Spotify .deb
+      - name: Download Free Download Manager
         run: |
-          curl -L -o spotify.deb https://download.spotify.com/linux/spotify-client_amd64.deb
+          wget -O freedownloadmanager.deb https://files2.freedownloadmanager.org/latest/freedownloadmanager.deb
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload as artifact
+        uses: actions/upload-artifact@v3
         with:
-          name: spotify-deb
-          path: spotify.deb
+          name: FDM-Linux
+          path: freedownloadmanager.deb
