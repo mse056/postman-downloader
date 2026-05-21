@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Download Free Download Manager
         run: |
-          wget -O freedownloadmanager.deb https://files2.freedownloadmanager.org/latest/freedownloadmanager.deb
+          wget -O freedownloadmanager.deb https://dn3.freedownloadmanager.org/6/latest/freedownloadmanager.deb
 
       - name: Upload as artifact
         uses: actions/upload-artifact@v4
