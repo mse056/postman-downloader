@@ -12,7 +12,7 @@ jobs:
           wget -O freedownloadmanager.deb https://files2.freedownloadmanager.org/latest/freedownloadmanager.deb
 
       - name: Upload as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: FDM-Linux
           path: freedownloadmanager.deb
